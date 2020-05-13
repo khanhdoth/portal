@@ -18,7 +18,7 @@
 
     exports.push([module.i, "/* You can add global styles to this file, and also import other style files */", "", {
       "version": 3,
-      "sources": ["/home/coder/project/dev/git/portal/src/styles.scss"],
+      "sources": ["/home/dev/git/portal/src/styles.scss"],
       "names": [],
       "mappings": "AAAA,8EAAA",
       "file": "styles.scss",
@@ -464,7 +464,7 @@
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /home/coder/project/dev/git/portal/src/styles.scss */
+    /*! /home/dev/git/portal/src/styles.scss */
     "./src/styles.scss");
     /***/
   }
