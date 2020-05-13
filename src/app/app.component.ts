@@ -8,13 +8,17 @@ import { ApiService } from './api.service';
 })
 export class AppComponent implements OnInit {
   title = 'portal';
+  host = location.protocol + '//' + location.hostname;
   repos;
 
   constructor(private apiService: ApiService) { }
   ngOnInit() {
-    this.apiService.getRepos().subscribe((data)=>{
-      console.log(data);
-      this.repos = data;
+    this.apiService.getRepos().subscribe((repos:Array<any>)=>{
+      console.log(repos);
+      repos.forEach(repo => {
+        repo.ideLink =  this.host + '/vscode/?home=folder=/home/coder/project/dev/git/' + repo.name; 
+      })
+      this.repos = repos;
     });
   }
 }
