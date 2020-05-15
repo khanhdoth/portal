@@ -142,7 +142,7 @@ class AppComponent {
         this.apiService.getRepos().subscribe((repos) => {
             console.log(repos);
             repos.forEach(repo => {
-                repo.ideLink = this.host + '/vscode/?home=folder=/home/coder/project/dev/git/' + repo.name;
+                repo.ideLink = this.host + '/vscode/?folder=/home/coder/project/dev/git/' + repo.name;
             });
             this.repos = repos;
         });

@@ -284,7 +284,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.apiService.getRepos().subscribe(function (repos) {
             console.log(repos);
             repos.forEach(function (repo) {
-              repo.ideLink = _this.host + '/vscode/?home=folder=/home/coder/project/dev/git/' + repo.name;
+              repo.ideLink = _this.host + '/vscode/?folder=/home/coder/project/dev/git/' + repo.name;
             });
             _this.repos = repos;
           });
